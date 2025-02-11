@@ -3,6 +3,8 @@ const aiRoutes = require("./routes/ai.routes");
 
 const app = express(); //it creates an server and then we store it in a variable
 
+app.use(express.json());
+
 app.get("/", (req, res) => {
   res.send("Hello World");
 });
