@@ -39,6 +39,13 @@ The frontend is built with React and Vite, providing a responsive user interface
 
 ## Installation
 
+### Clone the Repository
+
+```
+git clone git@github.com:anmolsah/VilaCodeReviewer-.git
+cd VilaCodeReviewer-
+```
+
 ### Prerequisites
 
 - Node.js (v16 or higher)
