@@ -25,6 +25,11 @@ const App = () => {
   }, [darkMode]);
 
   const handleReview = async () => {
+    if (!code.trim()) {
+      setReview("⚠️ Please provide code to review.");
+      return;
+    }
+
     setLoading(true);
     try {
       const response = await axios.post(
