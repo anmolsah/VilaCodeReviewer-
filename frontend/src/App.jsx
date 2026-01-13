@@ -116,14 +116,26 @@ const App = () => {
               </h2>
               <button
                 onClick={handleReview}
+                disabled={loading}
                 className={`flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-white transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                   darkMode
                     ? "bg-blue-600 hover:bg-blue-700 focus:ring-offset-gray-800"
                     : "bg-blue-600 hover:bg-blue-700 focus:ring-offset-white"
-                } focus:ring-offset-2`}
+                } focus:ring-offset-2 ${
+                  loading ? "opacity-50 cursor-not-allowed" : ""
+                }`}
               >
-                <Sparkles className="h-4 w-4" />
-                Review Code
+                {loading ? (
+                  <>
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                    Reviewing...
+                  </>
+                ) : (
+                  <>
+                    <Sparkles className="h-4 w-4" />
+                    Review Code
+                  </>
+                )}
               </button>
             </div>
             <div className="relative">
