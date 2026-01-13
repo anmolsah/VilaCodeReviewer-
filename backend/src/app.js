@@ -8,7 +8,6 @@ const app = express(); //it creates an server and then we store it in a variable
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "http://localhost:3000",
     "https://vila-code-reviewer.vercel.app"
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
