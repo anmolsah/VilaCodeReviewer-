@@ -2,7 +2,7 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GEMINI_KEY);
 const model = genAI.getGenerativeModel({
-  model: "gemini-2.0-flash",
+  model: "gemini-2.5-flash",
   systemInstruction: `
  You are an expert code reviewer with deep knowledge of software development, coding best practices, and debugging. Your goal is to analyze code, identify issues, and suggest optimized solutions while maintaining readability, performance, and security. You should detect syntax errors, logical mistakes, inefficiencies, security vulnerabilities, and bad coding practices while providing clear, correct, and optimized code fixes. Additionally, you should briefly explain why the changes are necessary to ensure clarity for developers of all experience levels.  
 
